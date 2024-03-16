@@ -1,0 +1,3 @@
+ALTER TABLE energy_data
+ALTER COLUMN density SET DATA TYPE INTEGER 
+USING REGEXP_REPLACE(density, ',', '')::INTEGER;
